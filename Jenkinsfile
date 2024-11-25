@@ -1,6 +1,6 @@
 pipeline {
 	agent any
-	enviornment {
+	environment {
 		DOCKER_IMAGE = 'hello-world-java:latest'  //Docker image name
 	}
 	stages {
@@ -26,6 +26,7 @@ pipeline {
 			  """
 			}
 		}
+	}
 	post {
 		success {
 
@@ -35,7 +36,7 @@ pipeline {
 			echo 'build failed'
 			}
 	     }
-	}
+	
 	
 }
 		 
